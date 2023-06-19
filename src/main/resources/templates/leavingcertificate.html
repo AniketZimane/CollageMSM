@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>STUDENT_LC_MANAGEMNT_SM</title>
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+    <!-- html2pdf.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Roboto:300,400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900">
+    <link rel="stylesheet" href="/assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/assets/css/animate.min.css">
+    <link rel="stylesheet" href="/assets/css/baguetteBox.min.css">
+    <link rel="stylesheet" href="/assets/css/Black-Navbar.css">
+    <link rel="stylesheet" href="/assets/css/Card-Store.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/css/theme.bootstrap_4.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="/assets/css/Login-Form-blue-Gradient-Blue-gradient-login-form.css">
+    <link rel="stylesheet" href="/assets/css/Login-Form-blue-Gradient.css">
+    <link rel="stylesheet" href="/assets/css/Ludens---1-Index-Table-with-Search--Sort-Filters-v20.css">
+    <link rel="stylesheet" href="/assets/css/Ludens---Create-Edit-Form.css">
+    <link rel="stylesheet" href="/assets/css/Navbar-With-Button-icons.css">
+    <link rel="stylesheet" href="/assets/css/Profile-Edit-Form-styles.css">
+    <link rel="stylesheet" href="/assets/css/Profile-Edit-Form.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        var button = document.getElementById("cmd");
+        button.addEventListener("click", function() {
+          var element = document.getElementById("content");
+          html2pdf()
+            .from(element)
+            .save("leaving_certificate.pdf");
+        });
+      });
+</script>
+</head>
+
+<body>
+<div th:replace="userFragment.html ::userNavBarFragment"></div>
+<div id="content">
+    <div  class="card" style="width: 500dp;border-top-left-radius: 20px;border-top-right-radius: 20px;border-bottom-right-radius: 20px;border-bottom-left-radius: 20px;box-shadow: 2px 2px 16px 8px rgba(0,0,0,0.1);min-width: 300px;border-style: none;max-width: 100%;margin: 16px;height: 800dp;">
+        <div class="text-center" style="height: 250px;background: var(--bs-gray-300);"><img src="/assets/img/orglogo.png" width="100PX" height="80PX" style="margin-top: 10px;">
+            <div>
+                <h1 class="text-center d-flex d-lg-flex justify-content-center justify-content-lg-center" style="font-weight: bold;font-family: Merriweather, serif;margin-top: 10PX;margin-right: 30px;text-align: center;">LEAVING CERTIFICATE</h1>
+            </div>
+            <h6 class="text-center" style="font-style: italic;font-family: 'Source Sans Pro', sans-serif;">K.E.S.YASHWANT RAGHOJI PARAB VIDHYALAY VASOLI</h6>
+        </div>
+        <div class="card-body d-flex flex-column justify-content-between" style="padding-bottom: 20px;height: 410px;">
+            <div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <p style="font-family: 'Source Sans Pro', sans-serif;color: #212121;width: 250px;" th:text="'Application No:- '+${data.id}">Application No:-</p>
+                        </div>
+                        <div class="col-md-4">
+                            <p style="font-family: 'Source Sans Pro', sans-serif;color: #212121;width: 250px;">School/Collage/code No:- K.E.S.YASHWANT RAGHOJI PARAB VIDHYALAY VASOLI</p>
+                        </div>
+                        <div class="col-md-4">
+                            <p style="font-family: 'Source Sans Pro', sans-serif;color: #212121;width: 250px;" th:text="'Admission No:- '+${data.id}">Admission No:-</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h6 th:text="'1.Name of Student:-'+${data.fname}+' '+${data.mname}+' '+${data.lname}">1.Name of Student:-</h6>
+                        </div>
+                        <div class="col-md-12">
+                            <h6 th:text="'2.Mother Name:- '+${data.motherName}+' '+${data.lname}">2.Mother Name:-</h6>
+                        </div>
+                        <div class="col-md-12">
+                            <h6 th:text="'3.Father or Guardians Name:- '+${data.mname}+' '+${data.lname}">3.Father's/Guardians Name:-</h6>
+                        </div>
+                        <div class="col-md-12">
+                            <h6 th:text="'4.Nationality:-'+${data.country}">4.Nationality:-</h6>
+                        </div>
+                        <div class="col-md-12">
+                            <h6 th:text="'5.Whether the candidate belongs to schedule Caste/Schedule Tribute/OBC:- '+${data.cast}">5.Whether the candidate belongs to schedule Caste/Schedule Tribute/OBC:-</h6>
+                        </div>
+                        <div class="col-md-12">
+                            <h6 th:text="'6.Date of first admission in the School with class:- '+${data.admissionDate}+'('+${data.stuclass}+'Standard )'">6.Date of first admission in the School with class:-&nbsp;</h6>
+                        </div>
+                        <div class="col-md-12">
+                            <h6 th:text="'7.Date of birth (in Christian Era) according to Admission Register (in figure):- '+${data.dob}">7.Date of birth (in Christian Era) according to Admission Register&nbsp; (in figure):-</h6>
+                        </div>
+                        <div class="col-md-12">
+                            <h6></h6>
+                        </div>
+                        <div class="col-md-12">
+                            <h6 th:text="'8. Class in which the student last studied:- '+ ' (in figure) ' + ${T(com.CollageMSM.CollageMSM.Utils.NumberUtils).wordToNumber(data.stuclass)} +' (in words) ' + ${data.stuclass}"></h6>
+                        </div>
+                        <div class="col-md-12">
+                            <h6 th:text="'9.School/Board Annual examination last taken with result:-'+' '+${additionalData.examStu}">9.School/Board Annual examination last taken with result:-</h6>
+                        </div>
+                        <div class="col-md-12">
+                            <h6>10.Wether failed if so once/twice in the same class:-
+                                <span th:text="${additionalData.examStu == 'Pass' ? 'No' : 'Yes'}"></span>
+                            </h6>
+                        </div>
+                        <div class="col-md-12">
+                            <h6 th:text="'11.Subject studied:-'+${additionalData.subject}">11.Subject studied:-</h6>
+                        </div>
+                        <div class="col-md-12">
+                            <h6>12.Whether qualified for the promotion to the higher class:-
+                                <span th:text="${additionalData.examStu == 'Pass' ? 'Yes' : 'No'}"></span>
+                            </h6>
+                        </div>
+                        <div class="col-md-12">
+                            <h6 th:text="'13.Any fee concession availed of: if so the nature of suck concession:-'+${additionalData.feesConcession}">13.Any fee concession availed of: if so the nature of suck concession:-</h6>
+                        </div>
+                        <div class="col-md-12">
+                            <h6 th:txt="'14.Game played or extra-curricular activities in which the student usually took part:-'+${data.hobbies}">14.Game played or extra-curricular activities in which the student usually took part:-</h6>
+                        </div>
+                        <div class="col-md-12">
+                            <h6 th:text="'15.General conduct:-'+${additionalData.generalConduct}">15.General conduct:-</h6>
+                        </div>
+                        <div class="col-md-12">
+                            <h6 th:text="'16.Reason of leaving the school:-'+${additionalData.reason}">16.Reason of leaving the school:-</h6>
+                        </div>
+                        <div class="col-md-12">
+                            <h6 th:text="'18.Date of leaving:-'+${#dates.format(#dates.createNow(), 'yyyy-MM-dd')}">18.Date of leaving:-</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container" style="margin-top: 150px;">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h5 style="font-weight: bold;">Signature of class teacher</h5>
+                    </div>
+                    <div class="col-md-4">
+                        <h5 style="font-weight: bold;">Checked by (full name and designation)</h5>
+                    </div>
+                    <div class="col-md-4">
+                        <h5 style="font-weight: bold;">Principle and director</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-body d-flex flex-column justify-content-between" style="padding-bottom: 20px;height: 590px;"></div>
+    </div>
+    <div align="center" style="margin-bottom:400px;margin-top:490px;"><button class="btn btn-primary d-flex d-xl-flex justify-content-center align-items-center justify-content-xl-center align-items-xl-center" role="button" data-bss-hover-animate="pulse" style="margin-top: 40px;background: #128C7E;border-style: none;padding-top: 8px;padding-bottom: 8px;box-shadow: 2px 2px 8px rgba(117,117,117,0.71);" id="cmd"><i class="fas fa-cloud-download-alt" style="color: rgb(255,255,255);font-size: 25px;margin-right: 16px;"></i>download</button></div>
+</div>
+    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/assets/js/bs-init.js"></script>
+    <script src="/assets/js/baguetteBox.min.js"></script>
+    <script src="/assets/js/creative.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/js/jquery.tablesorter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/js/widgets/widget-filter.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/js/widgets/widget-storage.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="/assets/js/Ludens---1-Index-Table-with-Search--Sort-Filters-v20-Ludens---1-Index-Table-with-Search--Sort-Filters.js"></script>
+    <script src="/assets/js/Ludens---1-Index-Table-with-Search--Sort-Filters-v20-Ludens---Material-UI-Actions.js"></script>
+    <script src="/assets/js/Profile-Edit-Form-profile.js"></script>
+</body>
+
+</html>

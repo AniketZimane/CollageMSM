@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>STUDENT_LC_MANAGEMNT_SM</title>
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic&amp;display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Roboto:300,400,700"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900"
+    />
+    <link rel="stylesheet" href="/assets/css/baguetteBox.min.css" />
+    <link rel="stylesheet" href="/assets/css/Black-Navbar.css" />
+    <link rel="stylesheet" href="/assets/css/Card-Store.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/css/theme.bootstrap_4.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/assets/css/Login-Form-blue-Gradient-Blue-gradient-login-form.css"
+    />
+    <link rel="stylesheet" href="/assets/css/Login-Form-blue-Gradient.css" />
+    <link
+      rel="stylesheet"
+      href="/assets/css/Ludens---1-Index-Table-with-Search--Sort-Filters-v20.css"
+    />
+    <link rel="stylesheet" href="/assets/css/Ludens---Create-Edit-Form.css" />
+    <link rel="stylesheet" href="/assets/css/Navbar-With-Button-icons.css" />
+    <link rel="stylesheet" href="/assets/css/Profile-Edit-Form-styles.css" />
+    <link rel="stylesheet" href="/assets/css/Profile-Edit-Form.css" />
+  </head>
+
+  <body>
+    <div class="container profile profile-view" id="profile">
+      <div class="row">
+        <div class="col-md-12 alert-col relative">
+          <div
+            class="alert alert-info alert-dismissible absolue center"
+            role="alert"
+          >
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="alert"
+              aria-label="Close"
+            ></button
+            ><span>Profile save with success</span>
+          </div>
+        </div>
+      </div>
+      <form
+        method="post"
+        action="/student/savedata/"
+        th:object="${Registration}"
+        enctype="multipart/form-data"
+      >
+        <div class="row profile-row">
+          <div class="col-md-4 relative">
+            <div class="avatar">
+              <div class="avatar-bg center"></div>
+            </div>
+            <input
+              class="form-control form-control"
+              type="file"
+              required=""
+              name="file"
+              accept="image/png"
+            />
+          </div>
+          <div class="col-md-8">
+            <h1>Profile</h1>
+            <hr />
+            <div class="row">
+              <div class="col-sm-12 col-md-6">
+                <div class="form-group mb-3">
+                  <label class="form-label">Firstname </label
+                  ><input
+                    class="form-control"
+                    type="text"
+                    name="firstname"
+                    placeholder="Enter only first name"
+                  />
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6">
+                <div class="form-group mb-3">
+                  <label class="form-label">Lastname </label
+                  ><input
+                    class="form-control"
+                    type="text"
+                    name="lastname"
+                    placeholder="Enter only lastname"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-group mb-3">
+              <label class="form-label">Email </label
+              ><input
+                class="form-control"
+                type="email"
+                autocomplete="off"
+                required=""
+                name="email"
+                placeholder="Enter email id"
+              />
+            </div>
+            <div class="form-group mb-3">
+              <label class="form-label">Mobile Number </label
+              ><input
+                class="form-control"
+                type="number"
+                autocomplete="off"
+                required=""
+                name="mobilenumber"
+                placeholder="Enter mobile number"
+              />
+            </div>
+            <div class="form-group mb-3">
+              <label class="form-label">OTP</label
+              ><input
+                class="form-control"
+                type="password"
+                name="reg_otp"
+                autocomplete="off"
+                required=""
+                placeholder="Enter otp"
+              />
+            </div>
+            <div class="row">
+              <div class="col-sm-12 col-md-6">
+                <div class="form-group mb-3">
+                  <label class="form-label">Password </label
+                  ><input
+                    class="form-control"
+                    type="password"
+                    name="password"
+                    autocomplete="off"
+                    required=""
+                    placeholder="Enter password"
+                  />
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6">
+                <div class="form-group mb-3">
+                  <label class="form-label">Confirm Password</label
+                  ><input
+                    class="form-control"
+                    type="password"
+                    name="password"
+                    autocomplete="off"
+                    required=""
+                    placeholder="Confirm password"
+                  />
+                </div>
+              </div>
+            </div>
+            <hr />
+            <div class="row">
+              <div class="col-md-12 content-right">
+                <button class="btn btn-danger form-btn" type="reset">
+                  CANCEL</button
+                ><button class="btn btn-info form-btn" type="submit">
+                  SAVE</button
+                ><a
+                  href="/student/login/"
+                  style="
+                    color: var(--bs-gray-300);
+                    margin-top: 10px;
+                    margin-right: 50px;
+                  "
+                  >Already hava account</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/assets/js/bs-init.js"></script>
+    <script src="/assets/js/baguetteBox.min.js"></script>
+    <script src="/assets/js/creative.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/js/jquery.tablesorter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/js/widgets/widget-filter.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/js/widgets/widget-storage.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="/assets/js/Ludens---1-Index-Table-with-Search--Sort-Filters-v20-Ludens---1-Index-Table-with-Search--Sort-Filters.js"></script>
+    <script src="/assets/js/Ludens---1-Index-Table-with-Search--Sort-Filters-v20-Ludens---Material-UI-Actions.js"></script>
+    <script src="/assets/js/Profile-Edit-Form-profile.js"></script>
+  </body>
+</html>

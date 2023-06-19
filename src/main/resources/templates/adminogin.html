@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>Login - Brand</title>
+    <link rel="stylesheet" href="/assestad/bootstrap/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap"
+    />
+    <link rel="stylesheet" href="/assestad/fonts/fontawesome-all.min.css" />
+    <script src="/assets/js/Profile-Edit-Form-profile.js"></script>
+  </head>
+
+  <body class="bg-gradient-primary">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-9 col-lg-12 col-xl-10">
+          <div class="card shadow-lg o-hidden border-0 my-5">
+            <div class="card-body p-0">
+              <div class="row">
+                <div class="col-lg-6 d-none d-lg-flex">
+                  <div
+                    class="flex-grow-1 bg-login-image"
+                    style="
+                      background-image: url(/assets/img/loginicon.jpg);
+                      background-size: cover;
+                      background-position: center;
+                      padding: 40px;
+                    "
+                  ></div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="p-5">
+                    <div class="text-center">
+                      <h4 class="text-dark mb-4">Welcome Back!</h4>
+                    </div>
+                    <div th:if="${param.error}" class="alert alert-danger">
+                      Invalid username and password.
+                    </div>
+                    <div th:if="${param.logout}" class="alert alert-success">
+                      You have been logged out.
+                    </div>
+                    <form class="user">
+                      <div class="mb-3">
+                        <input
+                          class="form-control form-control-user"
+                          type="email"
+                          id="exampleInputEmail"
+                          aria-describedby="emailHelp"
+                          placeholder="Enter Email Address..."
+                          name="email"
+                        />
+                      </div>
+                      <div class="mb-3">
+                        <input
+                          class="form-control form-control-user"
+                          type="password"
+                          id="exampleInputPassword"
+                          placeholder="Password"
+                          name="password"
+                        />
+                      </div>
+                      <div class="mb-3">
+                        <div class="custom-control custom-checkbox small">
+                          <div class="form-check">
+                            <input
+                              class="form-check-input custom-control-input"
+                              type="checkbox"
+                              name="remember_me"
+                              id="formCheck-1"
+                            /><label
+                              class="form-check-label custom-control-label"
+                              for="formCheck-1"
+                              >Remember Me</label
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <button
+                        class="btn btn-primary d-block btn-user w-100"
+                        type="submit"
+                      >
+                        Login
+                      </button>
+                      <hr />
+                      <a
+                        class="btn btn-primary d-block btn-google btn-user w-100 mb-2"
+                        role="button"
+                        ><i class="fab fa-google"></i>&nbsp; Login with
+                        Google</a
+                      ><a
+                        class="btn btn-primary d-block btn-facebook btn-user w-100"
+                        role="button"
+                        ><i class="fab fa-facebook-f"></i>&nbsp; Login with
+                        Facebook</a
+                      >
+                      <hr />
+                    </form>
+                    <div class="text-center">
+                      <a
+                        class="small"
+                        data-bs-target="#modal-1"
+                        data-bs-toggle="modal"
+                        >Forgot Password?</a
+                      >
+                    </div>
+                    <div class="text-center">
+                      <a class="small" href="/admin/register/"
+                        >Create an Account!</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="modal-1">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Forget password</h4>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <section class="py-4 py-xl-5">
+              <div class="container">
+                <div class="card mb-5">
+                  <div class="card-body d-flex flex-column align-items-center">
+                    <div
+                      class="bs-icon-xl bs-icon-circle bs-icon-primary bs-icon my-4"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="1em"
+                        height="1em"
+                        fill="currentColor"
+                        viewBox="0 0 16 16"
+                        class="bi bi-person"
+                      >
+                        <path
+                          d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <form class="text-center" method="post">
+                      <div class="mb-3">
+                        <input
+                          class="form-control"
+                          type="password"
+                          name="oldpassword"
+                          placeholder="Old password"
+                        />
+                      </div>
+                      <div class="mb-3">
+                        <input
+                          class="form-control"
+                          type="password"
+                          name="newpassword"
+                          placeholder="New password"
+                        />
+                      </div>
+                      <div class="mb-3">
+                        <input
+                          class="form-control"
+                          type="password"
+                          name="confirm_password"
+                          placeholder="Confirm password"
+                        />
+                      </div>
+                      <div class="mb-3">
+                        <button
+                          class="btn btn-primary d-block w-100"
+                          type="submit"
+                        >
+                          Login
+                        </button>
+                      </div>
+                      <a href="#">Use another way</a>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/assestad/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/assestad/js/theme.js"></script>
+    <script src="/assets/js/Profile-Edit-Form-profile.js"></script>
+  </body>
+</html>

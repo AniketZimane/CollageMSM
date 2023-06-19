@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Fees criteria-Innovative THings</title>
+    <link rel="stylesheet" href="/assestad/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Advent+Pro&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;display=swap">
+    <link rel="stylesheet" href="/assestad/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/assestad/css/Black-Navbar.css">
+    <link rel="stylesheet" href="/assestad/css/FORM.css">
+    <link rel="stylesheet" href="/assestad/css/Multi-step-form.css">
+    <link rel="stylesheet" href="/assestad/css/Pretty-Login-Form-.css">
+    <script src="/assets/js/clock.js"></script>
+    <script src="/assets/js/sweetalert.js"></script>
+
+</head>
+
+<body id="page-top">
+<div id="wrapper">
+    <script th:inline="javascript">
+       var msg=[[${msg}]]
+       var emsg=[[${emsg}]]
+       if(msg!=null)
+       {
+               swal("Good job!", msg, "success");
+        }
+        if(emsg!=null)
+        {
+               swal("Opps!", emsg, "info");
+
+        }
+</script>
+    <div th:replace="fragmen1.html ::adminfragment1"></div>
+    <div class="d-flex flex-column" id="content-wrapper">
+        <div id="content">
+            <div th:replace="fragment2.html ::adminfragfragment2"></div>
+            <div class="container-fluid">
+                <div class="d-sm-flex justify-content-between align-items-center mb-4">
+                    <h3 class="text-dark mb-4">K.E.S.Yashwant Raghoji Parab Viddhyalay Vasoli</h3>                </div>
+                <div class="row login-form">
+                    <div class="col-md-4 offset-md-4" style="width: 400px;">
+                        <h2 class="text-center form-heading">Fees Criteria</h2>
+                        <form class="custom-form" method="post" action="/admin/fees/savedata/">
+                            <div class="form-group mb-3"><label class="form-label">Open hindu maraths:-</label><input class="form-control" type="number" placeholder="Enter fees amount" name="openCat"></div>
+                            <div class="form-group mb-3"><label class="form-label">OBC:-</label><input class="form-control" type="number" placeholder="Enter fees amount" name="obcCat"></div>
+                            <div class="form-group mb-3"><label class="form-label">VJNT:-</label><input class="form-control" type="number" placeholder="Enter fees amount" name="vjntCat"></div>
+                            <div class="form-group mb-3"><label class="form-label">ST:-</label><input class="form-control" type="number" placeholder="Enter fees amount" name="stCat"></div>
+                            <div class="form-group mb-3"><label class="form-label">EWS-</label><input class="form-control" type="number" placeholder="Enter fees amount" name="ewsCat"></div>
+                            <div class="form-group mb-3"><label class="form-label">TFWS-</label><input class="form-control" type="number" placeholder="Enter fees amount" name="tfwsCat"></div><button class="btn btn-secondary border rounded-pill d-block submit-button w-100" type="submit" style="background: var(--bs-teal);">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <footer class="bg-white sticky-footer">
+                <div class="container my-auto">
+                    <div class="text-center my-auto copyright"><span>Copyright © Innovative THings 2023</span></div>
+                </div>
+            </footer>
+        </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+    </div>
+    <script src="/assestad/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/assestad/js/Multi-step-form-script.js"></script>
+    <script src="/assestad/js/theme.js"></script>
+</body>
+
+</html>

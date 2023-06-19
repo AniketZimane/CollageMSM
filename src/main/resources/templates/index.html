@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - Brand</title>
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Roboto:300,400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900">
+    <link rel="stylesheet" href="/assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/css/aos.min.css">
+    <link rel="stylesheet" href="/assets/css/baguetteBox.min.css">
+    <link rel="stylesheet" href="/assets/css/Black-Navbar.css">
+    <link rel="stylesheet" href="/assets/css/Card-Store.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/css/theme.bootstrap_4.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="/assets/css/Login-Form-blue-Gradient-Blue-gradient-login-form.css">
+    <link rel="stylesheet" href="/assets/css/Login-Form-blue-Gradient.css">
+    <link rel="stylesheet" href="/assets/css/Ludens---1-Index-Table-with-Search--Sort-Filters-v20.css">
+    <link rel="stylesheet" href="/assets/css/Ludens---Create-Edit-Form.css">
+    <link rel="stylesheet" href="/assets/css/Navbar-With-Button-icons.css">
+    <link rel="stylesheet" href="/assets/css/Profile-Edit-Form-styles.css">
+    <link rel="stylesheet" href="/assets/css/Profile-Edit-Form.css">
+    <script src="/assets/js/sweetalert.js"></script>
+</head>
+
+<body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="57">
+<script th:inline="javascript">
+       var msg=[[${msg}]]
+       var emsg=[[${emsg}]]
+       if(msg!=null)
+       {
+               swal("Good job!", msg, "success");
+        }
+        if(emsg!=null)
+        {
+               swal("Opps!", emsg, "info");
+
+        }
+</script>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container"><a class="navbar-brand" href="#page-top">innovative Things</a><button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-align-justify"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/student/requesttrack/">RequestTracking</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/student/login/">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="text-center text-white d-flex masthead" style="background-image: url('assets/img/header.jpg');">
+        <div class="container my-auto">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <h1 class="text-uppercase"><strong>Welcome to k.e.s.yashwant raghoji parab vidhylay vasoli</strong></h1>
+                    <hr>
+                </div>
+            </div>
+            <div class="col-lg-8 mx-auto">
+                <p class="text-faded mb-5"><br>Education is the most powerful weapon which you can use to change the world.</p><a class="btn btn-primary btn-xl" role="button" href="#services">Find Out More</a>
+            </div>
+        </div>
+    </header>
+    <section id="about" class="bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col offset-lg-8 text-center mx-auto">
+                    <h2 class="text-white section-heading">About our school</h2>
+                    <hr class="light my-4">
+                    <p class="text-faded mb-4">Welcome to our college, where we are dedicated to providing quality education to students from rural areas. We understand the unique challenges faced by students in rural communities and strive to bridge the gap by offering accessible and inclusive educational opportunities.<br><br>At our college, we believe that education is the key to unlocking the potential within every individual. We are committed to empowering students from rural areas by equipping them with the knowledge, skills, and tools they need to succeed in today's ever-changing world. Our curriculum is designed to cater to the specific needs and aspirations of rural students, while also aligning with global educational standards.<br><br>One of the core principles that sets our college apart is our focus on community engagement. We recognize the importance of fostering strong ties with the local community and actively involve them in our educational initiatives. Through partnerships with local organizations, businesses, and government agencies, we create meaningful learning experiences that address the unique challenges and opportunities of rural life.<br><br>Our faculty members are experienced and passionate educators who are dedicated to nurturing the talents of every student. They employ innovative teaching methods that encourage critical thinking, creativity, and problem-solving skills. We believe in a student-centered approach to learning, where individual needs and aspirations are valued and supported.<br><br>In addition to academic excellence, we also prioritize the holistic development of our students. We offer a wide range of extracurricular activities, including sports, arts, and cultural programs, to encourage students to explore their interests and develop well-rounded personalities. We believe that a balanced education goes beyond textbooks and classrooms, and we strive to create a vibrant and engaging learning environment.<br><br>Furthermore, we understand that financial constraints can often hinder access to higher education for students from rural areas. That is why we offer various scholarships, grants, and financial aid options to ensure that deserving students have equal opportunities to pursue their dreams and ambitions.<br><br>As you navigate through our website, you will find detailed information about our courses, faculty, facilities, and admission procedures. We encourage you to explore and discover the unique educational experience we offer to rural students. Whether you aspire to become a doctor, engineer, teacher, or entrepreneur, our college is here to support you on your educational journey and empower you to make a positive impact on your community.<br><br>Join us at our college, where we strive to transform the lives of students from rural areas through education, opportunity, and empowerment. Together, let us build a brighter future for all.</p><a class="btn btn-light btn-xl" role="button" href="#services">Get Started!</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">At Your Service</h2>
+                    <hr class="my-4">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-3 text-center">
+                    <div class="mx-auto service-box mt-5"><a href="/student/amissionform/" class="fa fa-pencil-square fa-4x text-primary mb-3 sr-icons" data-aos="zoom-in" data-aos-duration="200" data-aos-once="true"></a>
+                        <h3 class="mb-3">Admission</h3>
+                        <p class="text-muted mb-0">For getting admission click on above icon.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 text-center">
+                    <div class="mx-auto service-box mt-5"><a href="/student/livingrequest/" class="fa fa-paper-plane fa-4x text-primary mb-3 sr-icons" data-aos="zoom-in" data-aos-duration="200" data-aos-delay="200" data-aos-once="true"></a>
+                        <h3 class="mb-3">Request for leaving certificate</h3>
+                        <p class="text-muted mb-0">For requesting leaving certificate click on above icon.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 text-center">
+                    <div class="mx-auto service-box mt-5"><a href="/student/bonafiderequest/" class="fa fa-paper-plane fa-4x text-primary mb-3 sr-icons" data-aos="fade" data-aos-duration="200" data-aos-delay="600" data-aos-once="true"></a>
+                        <h3 class="mb-3">Apply for Bonafide certificate</h3>
+                        <p class="text-muted mb-0">For requesting bonafide certificate click on above icon.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 text-center">
+                    <div class="mx-auto service-box mt-5"><a href="/student/importantdate/" class="fa fa-newspaper-o fa-4x text-primary mb-3 sr-icons" data-aos="zoom-in" data-aos-duration="200" data-aos-delay="400" data-aos-once="true"></a>
+                        <h3 class="mb-3">Important Date&nbsp;&nbsp;</h3>
+                        <p class="text-muted mb-0">To checking important date click on above icon.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="portfolio" class="p-0">
+        <div class="container-fluid p-0">
+            <div class="row g-0 popup-gallery">
+                <div class="col-sm-6 col-lg-4"><a class="portfolio-box" href="/assets/img/fullsize/1.jpg"><img class="img-fluid" src="/assets/img/thumbnails/1.jpg">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded"><span>Category</span></div>
+                                <div class="project-name"><span>Event Name</span></div>
+                            </div>
+                        </div>
+                    </a></div>
+                <div class="col-sm-6 col-lg-4"><a class="portfolio-box" href="/assets/img/fullsize/2.jpg"><img class="img-fluid" src="/assets/img/thumbnails/2.jpg">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded"><span>Category</span></div>
+                                <div class="project-name"><span>Event Name</span></div>
+                            </div>
+                        </div>
+                    </a></div>
+                <div class="col-sm-6 col-lg-4"><a class="portfolio-box" href="/assets/img/fullsize/3.jpg"><img class="img-fluid" src="/assets/img/thumbnails/3.jpg">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded"><span>Category</span></div>
+                                <div class="project-name"><span>Event Name</span></div>
+                            </div>
+                        </div>
+                    </a></div>
+                <div class="col-sm-6 col-lg-4"><a class="portfolio-box" href="/assets/img/fullsize/4.jpg"><img class="img-fluid" src="/assets/img/thumbnails/4.jpg">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded"><span>Category</span></div>
+                                <div class="project-name"><span>Event Name</span></div>
+                            </div>
+                        </div>
+                    </a></div>
+                <div class="col-sm-6 col-lg-4"><a class="portfolio-box" href="/assets/img/fullsize/5.jpg"><img class="img-fluid" src="/assets/img/thumbnails/5.jpg">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded"><span>Category</span></div>
+                                <div class="project-name"><span>Event Name</span></div>
+                            </div>
+                        </div>
+                    </a></div>
+                <div class="col-sm-6 col-lg-4"><a class="portfolio-box" href="/assets/img/fullsize/6.jpg"><img class="img-fluid" src="/assets/img/thumbnails/6.jpg">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded"><span>Category</span></div>
+                                <div class="project-name"><span>Event Name</span></div>
+                            </div>
+                        </div>
+                    </a></div>
+            </div>
+        </div>
+    </section>
+    <section class="text-white bg-dark">
+        <div class="container text-center">
+            <h2 class="mb-4">Innovative THings</h2><a class="btn btn-light btn-xl sr-button" role="button" data-aos="zoom-in" data-aos-duration="400" data-aos-once="true" href="#">Download Now!</a>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 text-center mx-auto">
+                    <h2 class="section-heading">Let's Get In Touch!</h2>
+                    <hr class="my-4">
+                    <p class="mb-5">Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 text-center ms-auto"><i class="fa fa-phone fa-3x mb-3 sr-contact" data-aos="zoom-in" data-aos-duration="300" data-aos-once="true"></i>
+                    <p>91-9422195873</p>
+                </div>
+                <div class="col-lg-4 text-center me-auto"><i class="fa fa-envelope-o fa-3x mb-3 sr-contact" data-aos="zoom-in" data-aos-duration="300" data-aos-delay="300" data-aos-once="true"></i>
+                    <p><a href="mailto:your-ad.developer@gmail.com">ad.developer@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/assets/js/aos.min.js"></script>
+    <script src="/assets/js/bs-init.js"></script>
+    <script src="/assets/js/baguetteBox.min.js"></script>
+    <script src="/assets/js/creative.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/js/jquery.tablesorter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/js/widgets/widget-filter.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/js/widgets/widget-storage.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="/assets/js/Ludens---1-Index-Table-with-Search--Sort-Filters-v20-Ludens---1-Index-Table-with-Search--Sort-Filters.js"></script>
+    <script src="/assets/js/Ludens---1-Index-Table-with-Search--Sort-Filters-v20-Ludens---Material-UI-Actions.js"></script>
+    <script src="/assets/js/Profile-Edit-Form-profile.js"></script>
+</body>
+
+</html>

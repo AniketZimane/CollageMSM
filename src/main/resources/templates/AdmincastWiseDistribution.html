@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Cast wise distribution-Innovative THings</title>
+    <link rel="stylesheet" href="/assestad/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Advent+Pro&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;display=swap">
+    <link rel="stylesheet" href="/assestad/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/assestad/css/Black-Navbar.css">
+    <link rel="stylesheet" href="/assestad/css/FORM.css">
+    <link rel="stylesheet" href="/assestad/css/Multi-step-form.css">
+    <link rel="stylesheet" href="/assestad/css/Pretty-Login-Form-.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/assets/js/clock.js"></script>
+    <script src="/assets/js/sweetalert.js"></script>
+
+    <script>
+          function distributeSeat(){
+            var totalSeat = document.getElementById("totalSeat").value;
+            var endpoint="/admin/pass/seatcount/";
+            var data=totalSeat;
+            axios.post(endpoint,data)
+                .then(function(response){
+                    var axiosData = response.data;
+                    $('#openCat').val(axiosData[0]);
+                    $('#obcCat').val(axiosData[1]);
+                    $('#vjntCat').val(axiosData[2])
+                    $('#stCat').val(axiosData[3])
+                    $('#ewsCat').val(axiosData[4])
+                    $('#tfwsCat').val(axiosData[5])
+                    console.log(response.data);
+              })
+              .catch(function (error) {
+                // Handle any errors that occurred during the request
+                console.error(error);
+              });
+          }
+    </script>
+</head>
+
+<body id="page-top">
+<script th:inline="javascript">
+       var msg=[[${msg}]]
+       var emsg=[[${emsg}]]
+       if(msg!=null)
+       {
+               swal("Good job!", msg, "success");
+        }
+        if(emsg!=null)
+        {
+               swal("Opps!", emsg, "info");
+
+        }
+</script>
+<div id="wrapper">
+    <div th:replace="fragmen1.html ::adminfragment1"></div>
+    <div class="d-flex flex-column" id="content-wrapper">
+        <div id="content">
+            <div th:replace="fragment2.html ::adminfragfragment2"></div>
+            <div class="container-fluid">
+                <div class="d-sm-flex justify-content-between align-items-center mb-4">
+                    <h3 class="text-dark mb-4">K.E.S.Yashwant Raghoji Parab Viddhyalay Vasoli</h3>
+                </div>
+                <div class="row login-form">
+                    <div class="col-md-4 offset-md-4" style="width: 400px;">
+                        <h2 class="text-center form-heading">Cast wise seat reservation</h2>
+                        <form class="custom-form" method="post" action="/admin/seatreservation/savedata/">
+                            <div class="form-group mb-3"><label class="form-label">Enter Total Number Of Seat Available in Your Institute:-</label><input class="form-control" type="number" placeholder="Enter total number of seat" id="totalSeat" name="totalSeat" oninput="distributeSeat()"></div>
+                            <div class="form-group mb-3"><label class="form-label">Open hindu maraths:-</label><input class="form-control" type="number" placeholder="Enter seat count" id="openCat" name="openCat"></div>
+                            <div class="form-group mb-3"><label class="form-label">OBC:-</label><input class="form-control" type="number" placeholder="Enter seat count" id="obcCat" name="obcCat"></div>
+                            <div class="form-group mb-3"><label class="form-label">VJNT:-</label><input class="form-control" type="number" placeholder="Enter seat count" id="vjntCat" name="vjntCat"></div>
+                            <div class="form-group mb-3"><label class="form-label">ST:-</label><input class="form-control" type="number" placeholder="Enter seat count" id="stCat" name="stCat"></div>
+                            <div class="form-group mb-3"><label class="form-label">EWS:-</label><input class="form-control" type="number" placeholder="Enter seat count" id="ewsCat" name="ewsCat"></div>
+                            <div class="form-group mb-3"><label class="form-label">TFWS:-</label><input class="form-control" type="number" placeholder="Enter seat count" id="tfwsCat" name="tfwsCat"></div><button class="btn btn-success border rounded-pill d-block submit-button w-100" type="submit" style="background: var(--bs-success);">Submit&nbsp;</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <footer class="bg-white sticky-footer">
+                <div class="container my-auto">
+                    <div class="text-center my-auto copyright"><span>Copyright © Innovative THings 2023</span></div>
+                </div>
+            </footer>
+        </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+    </div>
+
+    <script src="/assestad/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/assestad/js/Multi-step-form-script.js"></script>
+    <script src="/assestad/js/theme.js"></script>
+</body>
+
+</html>
