@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Important date entry - Innovative THings</title>
+    <link rel="stylesheet" href="/assestad/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
+    <link rel="stylesheet" href="/assestad/fonts/fontawesome-all.min.css">
+
+<!--    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Advent+Pro&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;display=swap">
+    <link rel="stylesheet" href="/assets/fonts/simple-line-icons.min.css">
+    <link rel="stylesheet" href="/assets/css/Black-Navbar.css">
+    <link rel="stylesheet" href="/assets/css/FORM.css">
+    <link rel="stylesheet" href="/assets/css/Multi-step-form.css">
+    <link rel="stylesheet" href="/assets/css/Pretty-Login-Form-.css">
+    <script src="/assets/js/clock.js"></script>
+    <script src="/assets/js/sweetalert.js"></script>
+</head>
+
+<body id="page-top">
+<script th:inline="javascript">
+       var msg=[[${msg}]]
+       if(msg!=null)
+       {
+               swal("Good job!", msg, "success");
+        }
+</script>
+    <div id="wrapper" >
+        <div th:replace="fragmen1.html ::adminfragment1"></div>
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content" >
+                <div th:replace="fragment2.html ::adminfragfragment2"></div>
+                <div class="container-fluid">
+                    <h3 class="text-dark mb-4">K.E.S.Yashwant Raghoji Parab Viddhyalay Vasoli</h3>
+                    <div class="card shadow">
+                        <div class="container text-center d-flex d-lg-flex justify-content-center justify-content-lg-center" style="padding:50px">
+                            <form style="width: 100DP;margin-left: 50px;" method="post" action="/admin/add_new_important_date/">
+                                <div class="col-md-8" style="width: 512px;padding-right: -1px;padding-left: 0px;">
+                                    <h1 style="font-size: 20px;font-family: Nunito, sans-serif;font-weight: bold;color: rgb(28,28,28);"><i class="icon-calendar" style="margin-right: 8px;color: #00baff;"></i>IMPORTANAT DATE INTRY</h1>
+                                    <hr>
+                                    <div class="form-group mb-3">
+                                        <label class="form-label text-start d-lg-flex justify-content-lg-start" style="color: rgb(21,21,22);font-family: Nunito, sans-serif;font-weight: bold;">Date Title</label>
+                                        <input class="border rounded-0 form-control" type="text" th:value="${data?.title}" name="title" style="margin-bottom: 15px;" placeholder="Enter title here assoiate with data">
+                                        <label class="form-label text-start d-lg-flex justify-content-lg-start" style="color: rgb(21,21,22);font-family: Nunito, sans-serif;font-weight: bold;">Choose Date</label>
+                                        <input class="form-control" th:value="${data?.date}" name="date" type="date"><input class="border rounded form-control" type="submit" name="save" style="margin-top: 15px;background-color: #00baff;color: rgb(255,255,255);" value="Save">
+                                        <a class="border rounded form-control" href="/admin/viewimportantdate/" name="viewbtn" style="margin-top: 15px;background-color: #00baff;color: rgb(255,255,255);">View Important date Record</a></div>
+                                </div>
+                            </form>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+            <footer class="bg-white sticky-footer">
+                <div class="container my-auto">
+                    <div class="text-center my-auto copyright"><span>Copyright © Innovative THings 2023</span></div>
+                </div>
+            </footer>
+        </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+    </div>
+    <script src="/assestad/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/assestad/js/theme.js"></script>
+
+    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/assets/js/Multi-step-form-script.js"></script>
+    <script src="/assets/js/theme.js"></script>
+</body>
+
+</html>

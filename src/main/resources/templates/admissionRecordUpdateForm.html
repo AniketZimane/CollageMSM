@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>STUDENT_LC_MANAGEMNT_SM</title>
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Roboto:300,400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900">
+    <link rel="stylesheet" href="/assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="/assets/css/baguetteBox.min.css">
+    <link rel="stylesheet" href="/assets/css/Black-Navbar.css">
+    <link rel="stylesheet" href="/assets/css/Card-Store.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/css/theme.bootstrap_4.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="/assets/css/Login-Form-blue-Gradient-Blue-gradient-login-form.css">
+    <link rel="stylesheet" href="/assets/css/Login-Form-blue-Gradient.css">
+    <link rel="stylesheet" href="/assets/css/Ludens---1-Index-Table-with-Search--Sort-Filters-v20.css">
+    <link rel="stylesheet" href="/assets/css/Ludens---Create-Edit-Form.css">
+    <link rel="stylesheet" href="/assets/css/Navbar-With-Button-icons.css">
+    <link rel="stylesheet" href="/assets/css/Profile-Edit-Form-styles.css">
+    <link rel="stylesheet" href="/assets/css/Profile-Edit-Form.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-md py-3">
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><span class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-bezier">
+                        <path fill-rule="evenodd" d="M0 10.5A1.5 1.5 0 0 1 1.5 9h1A1.5 1.5 0 0 1 4 10.5v1A1.5 1.5 0 0 1 2.5 13h-1A1.5 1.5 0 0 1 0 11.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zm10.5.5A1.5 1.5 0 0 1 13.5 9h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zM6 4.5A1.5 1.5 0 0 1 7.5 3h1A1.5 1.5 0 0 1 10 4.5v1A1.5 1.5 0 0 1 8.5 7h-1A1.5 1.5 0 0 1 6 5.5v-1zM7.5 4a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1z"></path>
+                        <path d="M6 4.5H1.866a1 1 0 1 0 0 1h2.668A6.517 6.517 0 0 0 1.814 9H2.5c.123 0 .244.015.358.043a5.517 5.517 0 0 1 3.185-3.185A1.503 1.503 0 0 1 6 5.5v-1zm3.957 1.358A1.5 1.5 0 0 0 10 5.5v-1h4.134a1 1 0 1 1 0 1h-2.668a6.517 6.517 0 0 1 2.72 3.5H13.5c-.123 0-.243.015-.358.043a5.517 5.517 0 0 0-3.185-3.185z"></path>
+                    </svg></span><span>Innovative THings</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul><button class="btn btn-primary" type="button">Button</button>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div style="color: rgb(133,135,150);height: 600px;">
+            <h2 class="text-center" style="color: rgb(19,19,20);font-family: 'Open Sans', sans-serif;font-weight: bold;font-size: 40PX;">ADMISSION FROM</h2>
+            <p class="text-center">K.E.S.YASHWANT RAGHOJI PARAB VIDHYALAY VASOLI</p>
+            <form method="post" action="/student/amission/record/update/" enctype="multipart/form-data" class="shadow align-content-center form-topborder" style="text-align: left;background: #ffffff;padding: 20px;">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3" style="margin-top: 12px;"><label class="form-label fw-bold" style="color: rgb(17,17,17);">Select Class*</label><select class="form-select" name="stuclass">
+                            <option value="ningth">Ningth</option>
+                            <option value="eigth" selected="">Eigth</option>
+                            <option value="tength">Tength</option>
+                        </select></div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3" style="margin-top: 12px;"><label class="form-label fw-bold" style="color: rgb(21,21,21);">First Name*</label><input class="form-control" type="text" th:value="${data?.fname}"  name="fname" placeholder="Enter first name" required=""></div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3" style="margin-top: 12px;"><label class="form-label fw-bold" style="color: rgb(17,17,17);">Father Name*</label><input class="form-control" type="text" th:value="${data?.mname}" placeholder="Enter father name" name="mname" required=""></div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 order-4" style="margin-top: 12px;"><label class="form-label fw-bold" style="color: rgb(26,26,27);">Last Name*</label><input class="form-control" type="text" th:value="${data?.lname}"  placeholder="Enter Last Name" name="lname" required=""></div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 order-4" style="margin-top: 12px;"><label class="form-label fw-bold" style="color: rgb(28,28,28);">Mother Name*</label><input class="form-control" type="text" placeholder="Enter mother name" th:value="${data?.motherName}"  name="motherName" required=""></div>
+                    <div class="col-12 col-md-6 col-lg-3 order-4" style="margin-top: 12px;"><label class="form-label fw-bold" style="color: rgb(16,16,17);">DOB*</label><input class="form-control" type="date" th:value="${data?.dob}"  name="dob" required=""></div>
+                    <div class="col-12 col-md-6 col-lg-3 order-4" style="margin-top: 12px;"><label class="form-label fw-bold" style="color: rgb(22,22,23);">Last School and collage name*</label><input class="form-control" type="text" placeholder="School/collage name" th:value="${data?.lastschoolName}"  name="lastschoolName" required=""></div>
+                    <div class="col-12 col-md-6 col-lg-3 order-4" style="margin-top: 12px;"><label class="form-label fw-bold" style="color: rgb(12,12,13);">Email id*</label><input class="form-control" type="text" placeholder="Enter email id" th:value="${data?.emailid}"  name="emailid" required=""></div>
+                    <div class="col-12 col-md-6 col-lg-3 order-4" style="margin-top: 12px;"><label class="form-label fw-bold" style="color: rgb(14,14,14);">Mobile number*</label><input class="form-control" type="text" placeholder="Enter mobile number" th:value="${data?.mobileno}"  name="mobileno" required=""></div>
+                    <div class="col-12 col-md-6 col-lg-3 order-4" style="margin-top: 12px;"><label class="form-label fw-bold" style="color: rgb(14,14,14);">Prcentage%*</label><input class="form-control" type="text" placeholder="Enter your last exam percetage" th:value="${data?.percentage}"  name="percentage" required=""></div>
+                    <div class="col-12 col-md-6 col-lg-3 order-4" style="margin-top: 12px;"><label class="form-label fw-bold" style="color: rgb(23,23,24);">Country*</label><select class="form-select" th:value="${data?.country}"  name="country" required="">
+                            <optgroup label="Select Country">
+                                <option value="India" selected="">India</option>
+                                <option value="America">Amarica</option>
+                                <option value="Other">Other</option>
+                            </optgroup>
+                        </select></div>
+                    <div class="col-12 col-md-6 col-lg-3 order-4" style="margin-top: 12px;"><label class="form-label fw-bold" style="color: rgb(26,26,27);">State*</label><select class="form-select" name="state" required="">
+                            <optgroup label="Select your state">
+                                <option value="Maharashtra" selected="">Maharashtra</option>
+                                <option value="Goa">Goa</option>
+                                <option value="Other">Other</option>
+                            </optgroup>
+                        </select></div>
+                    <div class="col-12 col-md-6 col-lg-3 order-4" style="margin-top: 12px;"><label class="form-label fw-bold" style="color: rgb(19,20,20);">District*</label><select class="form-select" name="district">
+                            <optgroup label="Select your district">
+                                <option value="Sindhudurga" selected="">Sindhudurga</option>
+                                <option value="Kolhapur">Kolhapur</option>
+                                <option value="Other">Other</option>
+                            </optgroup>
+                        </select></div>
+                    <div class="col-12 col-md-6 col-lg-3 order-4" style="margin-top: 12px;"><label class="form-label fw-bold" style="color: rgb(14,14,14);">Hobbies</label>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-1" name="hobbies" value="Reading"> <label class="form-check-label" for="formCheck-1">Reading</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-4" name="hobbies" value="Sport"><label class="form-check-label" for="formCheck-4">Sports</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-9" name="hobbies" value="Playing Video Game"><label class="form-check-label" for="formCheck-9">Playing Video Game</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-8" name="hobbies" value="Singing"><label class="form-check-label" for="formCheck-8">Singing</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-7" name="hobbies" value="Drawing"><label class="form-check-label" for="formCheck-7">Drawing</label></div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 order-4" style="margin-top: 12px;"><label class="form-label fw-bold" style="color: rgb(19,19,20);">Age*</label><input class="form-control" type="number" placeholder="0" th:value="${data?.age}" name="age" required=""></div>
+                    <div class="col-12 col-md-6 col-lg-3 order-4" style="margin-top: 12px;"><label class="form-label fw-bold" style="color: rgb(21,21,22);">Gender</label>
+                        <div class="form-check"><input class="form-check-input" th:selected="${data?.gender}" type="radio" id="formCheck-2" name="gender" value="Male"> <label class="form-check-label" for="formCheck-2">Male</label></div>
+                        <div class="form-check"><input class="form-check-input" th:selected="${data?.gender}" type="radio" id="formCheck-3" name="gender" value="Female"><label class="form-check-label" for="formCheck-3">Female</label></div>
+                        <div class="form-check"><input class="form-check-input" th:selected="${data?.gender}" type="radio" id="formCheck-5" name="gender" value="Other"><label class="form-check-label" for="formCheck-5">Other</label></div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-3 order-4" style="margin-top: 12px;"><label class="form-label fw-bold" style="color: rgb(27,27,28);">Upload Your Photo</label><input class="form-control" type="file" required="" name="file" accept="image/png"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 order-4" style="margin-top: 12px;"><label class="form-label fw-bold" style="color: rgb(21,21,21);">Any special skills</label><textarea th:value="${data?.skills}" class="form-control" placeholder="Any special skills" name="skills" required=""></textarea>
+                        <hr class="my-4">
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 order-4" style="margin-top: 12px;">
+                        <div class="row">
+                            <div class="col-sm-8 col-xl-10">
+                                <h3 class="fw-bold" style="color: rgb(23,23,24);">Parents Details</h3>
+                            </div>
+                            <div class="col-sm-4 col-md-4 col-xl-2 justify-content-center"><button class="btn btn-primary btn-sm-guinda mx-1" type="button"><i class="fa fa-minus"></i></button><button class="btn btn-primary btn-sm-guinda" type="button"><i class="fa fa-plus"></i></button></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-4" style="margin-top: 12px;"><label class="form-label fw-bold" style="color: rgb(15,15,16);">Father Name:</label><input class="form-control" type="text"th:value="${data?.mname}"  name="fathername" placeholder="Father name"></div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-4" style="margin-top: 12px;"><label class="form-label fw-bold" style="color: rgb(17,17,17);">Father Qualification:</label><select class="form-select" th:value="${data?.fqualification}"  name="fqualification" required="">
+                                    <option value="0" selected="">Qualification</option>
+                                    <option value="BA">BA</option>
+                                    <option value="BCOM">BCOM</option>
+                                    <option value="Other">Other</option>
+                                </select></div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-4" style="margin-top: 12px;"><label class="form-label fw-bold" style="color: rgb(18,18,18);">Mother Name:</label><input class="form-control" type="text" th:value="${data?.motherName}"  name="mothername" placeholder="Mother name"></div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-4" style="margin-top: 12px;"><label class="form-label fw-bold" style="color: rgb(17,17,17);">Mother Qualification:</label><select class="form-select" th:value="${data?.mqualification}"  name="mqualification" required="">
+                                    <option value="0" selected="">Qualification</option>
+                                    <option value="BA">BA</option>
+                                    <option value="BCOM">BCOM</option>
+                                    <option value="Other">Other</option>
+                                </select></div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-4" style="margin-top: 12px;"><label class="form-label fw-bold" style="color: rgb(15,15,16);">Cast:</label><select class="form-select" th:value="${data?.cast}"  name="cast" required>
+                                    <option value="0" selected="">Cast</option>
+                                    <option value=obc>OBC</option>
+                                    <option value="open">Open Hindu maratha</option>
+                                    <option value="other">other</option>
+                                </select></div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-4" style="margin-top: 12px;"><label class="form-label fw-bold" style="color: rgb(14,14,14);">Parent Mobile Number:</label><input class="form-control" type="text" th:value="${data?.pnumber}"  name="pnumber" placeholder="Mobile number" required=""></div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-4" style="margin-top: 12px;"><label class="form-label fw-bold" style="color: rgb(15,15,16);">Permanent address :</label><input class="form-control" type="text" th:value="${data?.peraddress}"  name="peraddress" placeholder="Permanent address" required=""></div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-4" style="margin-top: 12px;">
+                                <div class="form-check mt-4"><input class="form-check-input" type="checkbox" id="formCheck-6"><label class="form-check-label" for="formCheck-6" style="color: rgb(15,15,16);">Currently live in other place&nbsp;</label></div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-8" style="margin-top: 12px;"><label class="form-label fw-bold" style="color: rgb(18,18,18);">Temporary Address:</label><input class="form-control" type="text" th:value="${data?.tempaddress}" name="tempaddress" placeholder="Temporary address" required></div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="mt-4 mt-lg-4 my-4"><button class="btn btn-primary col-xl-12 btn-guardar col-sm-12 col-12"  type="submit" style="background: var(--bs-info);"><i class="fa fa-save mx-3"></i>&nbsp;Update</button><button class="btn btn-primary col-xl-12 mt-2 btn-limpiar col-sm-12 col-12" type="reset" style="background: var(--bs-gray-600);"><i class="fas fa-broom mx-3"></i>Clear</button></div>
+            </form>
+        </div>
+    </div>
+    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/assets/js/bs-init.js"></script>
+    <script src="/assets/js/baguetteBox.min.js"></script>
+    <script src="/assets/js/creative.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/js/jquery.tablesorter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/js/widgets/widget-filter.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/js/widgets/widget-storage.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="/assets/js/Ludens---1-Index-Table-with-Search--Sort-Filters-v20-Ludens---1-Index-Table-with-Search--Sort-Filters.js"></script>
+    <script src="/assets/js/Ludens---1-Index-Table-with-Search--Sort-Filters-v20-Ludens---Material-UI-Actions.js"></script>
+    <script src="/assets/js/Profile-Edit-Form-profile.js"></script>
+</body>
+
+</html>

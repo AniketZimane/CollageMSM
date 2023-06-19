@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>Collage Important data-Innovative THings</title>
+    <link rel="stylesheet" href="/assestad/bootstrap/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Advent+Pro&amp;display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;display=swap"
+    />
+    <link rel="stylesheet" href="/assestad/fonts/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="/assestad/css/Black-Navbar.css" />
+    <link rel="stylesheet" href="/assestad/css/FORM.css" />
+    <link rel="stylesheet" href="/assestad/css/Multi-step-form.css" />
+    <link rel="stylesheet" href="/assestad/css/Pretty-Login-Form-.css" />
+    <script src="/assets/js/clock.js"></script>
+  </head>
+
+  <body id="page-top">
+    <div id="wrapper">
+      <div th:replace="fragmen1.html ::adminfragment1"></div>
+      <div class="d-flex flex-column" id="content-wrapper">
+        <div id="content">
+          <div th:replace="fragment2.html ::adminfragfragment2"></div>
+          <div class="container-fluid">
+            <h3 class="text-dark mb-4">
+              K.E.S.Yashwant Raghoji Parab Viddhyalay Vasoli
+            </h3>
+            <div class="container" style="margin-top: 50px">
+              <div class="row">
+                <div class="col-md-4">
+                  <h4
+                    class="text-center"
+                    style="color: var(--bs-black); font-weight: bold"
+                  >
+                    Cut-off record
+                  </h4>
+                  <div class="table-responsive">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th
+                            style="
+                              background: var(--bs-yellow);
+                              color: var(--bs-black);
+                            "
+                          >
+                            Category&nbsp;
+                          </th>
+                          <th
+                            style="
+                              background: var(--bs-green);
+                              color: var(--bs-black);
+                            "
+                          >
+                            Percentage
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Year</td>
+                          <td
+                            th:each="data : ${cutOffList}"
+                            th:text="${data.currentYear}"
+                          >
+                            Cell 1
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Open Hindu Maratha</td>
+                          <td
+                            th:each="data : ${cutOffList}"
+                            th:text="${data.openCat}"
+                          >
+                            Cell 1
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>OBC</td>
+                          <td
+                            th:each="data : ${cutOffList}"
+                            th:text="${data.obcCat}"
+                          ></td>
+                        </tr>
+                        <tr>
+                          <td>VJNT</td>
+                          <td
+                            th:each="data : ${cutOffList}"
+                            th:text="${data.vjntCat}"
+                          >
+                            Cell 1
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>ST</td>
+                          <td
+                            th:each="data : ${cutOffList}"
+                            th:text="${data.stCat}"
+                          ></td>
+                        </tr>
+                        <tr>
+                          <td>EWS</td>
+                          <td
+                            th:each="data : ${cutOffList}"
+                            th:text="${data.ewsCat}"
+                          >
+                            Cell 1
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>TFWS</td>
+                          <td
+                            th:each="data : ${cutOffList}"
+                            th:text="${data.tfwsCat}"
+                          ></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="d-lg-flex justify-content-lg-center">
+                    <a
+                      class="btn btn-primary border rounded-pill"
+                      th:each="data : ${cutOffList}"
+                      th:href="@{/admin/cuoff/record/update/{id}/(id=${data.id})}"
+                      >Update</a
+                    >
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <h4
+                    class="text-center"
+                    style="font-weight: bold; color: var(--bs-black)"
+                  >
+                    Seat Reservation
+                  </h4>
+                  <div class="table-responsive">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th
+                            style="
+                              background: var(--bs-yellow);
+                              color: var(--bs-black);
+                            "
+                          >
+                            Category
+                          </th>
+                          <th
+                            style="
+                              background: var(--bs-success);
+                              color: var(--bs-black);
+                            "
+                          >
+                            Seat count
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Year</td>
+                          <td
+                            th:each="data : ${seatReservations}"
+                            th:text="${data.currentYear}"
+                          >
+                            Cell 1
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Open Hindu Maratha</td>
+                          <td
+                            th:each="data : ${seatReservations}"
+                            th:text="${data.openCat}"
+                          >
+                            Cell 1
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>OBC</td>
+                          <td
+                            th:each="data : ${seatReservations}"
+                            th:text="${data.obcCat}"
+                          ></td>
+                        </tr>
+                        <tr>
+                          <td>VJNT</td>
+                          <td
+                            th:each="data : ${seatReservations}"
+                            th:text="${data.vjntCat}"
+                          >
+                            Cell 1
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>ST</td>
+                          <td
+                            th:each="data : ${seatReservations}"
+                            th:text="${data.stCat}"
+                          ></td>
+                        </tr>
+                        <tr>
+                          <td>EWS</td>
+                          <td
+                            th:each="data : ${seatReservations}"
+                            th:text="${data.ewsCat}"
+                          >
+                            Cell 1
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>TFWS</td>
+                          <td
+                            th:each="data : ${seatReservations}"
+                            th:text="${data.tfwsCat}"
+                          ></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="d-lg-flex justify-content-lg-center">
+                    <a
+                      class="btn btn-primary border rounded-pill"
+                      th:each="data : ${seatReservations}"
+                      th:href="@{/admin/seat/record/update/{id}/(id=${data.id})}"
+                      >Update</a
+                    >
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <h4
+                    class="text-center"
+                    style="color: var(--bs-black); font-weight: bold"
+                  >
+                    Fees
+                  </h4>
+                  <div class="table-responsive">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th
+                            style="
+                              background: var(--bs-yellow);
+                              color: var(--bs-black);
+                            "
+                          >
+                            Category
+                          </th>
+                          <th
+                            style="
+                              background: var(--bs-success);
+                              color: var(--bs-black);
+                            "
+                          >
+                            Amount
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Year</td>
+                          <td
+                            th:each="data : ${feesCriteria}"
+                            th:text="${data.currentYear}"
+                          >
+                            Cell 1
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Open Hindu Maratha</td>
+                          <td
+                            th:each="data : ${feesCriteria}"
+                            th:text="${data.openCat}"
+                          >
+                            Cell 1
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>OBC</td>
+                          <td
+                            th:each="data : ${feesCriteria}"
+                            th:text="${data.obcCat}"
+                          ></td>
+                        </tr>
+                        <tr>
+                          <td>VJNT</td>
+                          <td
+                            th:each="data : ${feesCriteria}"
+                            th:text="${data.vjntCat}"
+                          >
+                            Cell 1
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>ST</td>
+                          <td
+                            th:each="data : ${feesCriteria}"
+                            th:text="${data.stCat}"
+                          ></td>
+                        </tr>
+                        <tr>
+                          <td>EWS</td>
+                          <td
+                            th:each="data : ${feesCriteria}"
+                            th:text="${data.ewsCat}"
+                          >
+                            Cell 1
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>TFWS</td>
+                          <td
+                            th:each="data : ${feesCriteria}"
+                            th:text="${data.tfwsCat}"
+                          ></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="d-lg-flex justify-content-lg-center">
+                    <a
+                      class="btn btn-primary border rounded-pill"
+                      th:each="data : ${feesCriteria}"
+                      th:href="@{/admin/fees/record/update/{id}/(id=${data.id})}"
+                      >Update</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="bg-white sticky-footer">
+          <div class="container my-auto">
+            <div class="text-center my-auto copyright">
+              <span>Copyright © Innovative THings 2023</span>
+            </div>
+          </div>
+        </footer>
+      </div>
+      <a class="border rounded d-inline scroll-to-top" href="#page-top"
+        ><i class="fas fa-angle-up"></i
+      ></a>
+    </div>
+    <script src="/assestad/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/assestad/js/Multi-step-form-script.js"></script>
+    <script src="/assestad/js/theme.js"></script>
+  </body>
+</html>
