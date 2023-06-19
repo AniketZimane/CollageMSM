@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>STUDENT_LC_MANAGEMNT_SM</title>
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Roboto:300,400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900">
+    <link rel="stylesheet" href="/assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/assets/css/animate.min.css">
+    <link rel="stylesheet" href="/assets/css/baguetteBox.min.css">
+    <link rel="stylesheet" href="/assets/css/Black-Navbar.css">
+    <link rel="stylesheet" href="/assets/css/Card-Store.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/css/theme.bootstrap_4.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="/assets/css/Login-Form-blue-Gradient-Blue-gradient-login-form.css">
+    <link rel="stylesheet" href="/assets/css/Login-Form-blue-Gradient.css">
+    <link rel="stylesheet" href="/assets/css/Ludens---1-Index-Table-with-Search--Sort-Filters-v20.css">
+    <link rel="stylesheet" href="/assets/css/Ludens---Create-Edit-Form.css">
+    <link rel="stylesheet" href="/assets/css/Navbar-With-Button-icons.css">
+    <link rel="stylesheet" href="/assets/css/Profile-Edit-Form-styles.css">
+    <link rel="stylesheet" href="/assets/css/Profile-Edit-Form.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand-md bg-dark py-3">
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><span class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-bezier">
+                        <path fill-rule="evenodd" d="M0 10.5A1.5 1.5 0 0 1 1.5 9h1A1.5 1.5 0 0 1 4 10.5v1A1.5 1.5 0 0 1 2.5 13h-1A1.5 1.5 0 0 1 0 11.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zm10.5.5A1.5 1.5 0 0 1 13.5 9h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zM6 4.5A1.5 1.5 0 0 1 7.5 3h1A1.5 1.5 0 0 1 10 4.5v1A1.5 1.5 0 0 1 8.5 7h-1A1.5 1.5 0 0 1 6 5.5v-1zM7.5 4a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1z"></path>
+                        <path d="M6 4.5H1.866a1 1 0 1 0 0 1h2.668A6.517 6.517 0 0 0 1.814 9H2.5c.123 0 .244.015.358.043a5.517 5.517 0 0 1 3.185-3.185A1.503 1.503 0 0 1 6 5.5v-1zm3.957 1.358A1.5 1.5 0 0 0 10 5.5v-1h4.134a1 1 0 1 1 0 1h-2.668a6.517 6.517 0 0 1 2.72 3.5H13.5c-.123 0-.243.015-.358.043a5.517 5.517 0 0 0-3.185-3.185z"></path>
+                    </svg></span><span>Brand</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-5"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-5">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">First Item</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Second Item</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Third Item</a></li>
+                </ul><a class="btn btn-primary ms-md-2" role="button" href="#">Button</a>
+            </div>
+        </div>
+    </nav>
+    <div class="card" style="width: 300dp;border-top-left-radius: 20px;border-top-right-radius: 20px;border-bottom-right-radius: 20px;border-bottom-left-radius: 20px;box-shadow: 2px 2px 16px 8px rgba(0,0,0,0.1);min-width: 300px;border-style: none;max-width: 100%;margin: 16px;height: 600px;">
+        <div style="height: 100px;background: var(--bs-gray-300);">
+            <h1 class="text-center" style="font-family: Merriweather, serif;font-weight: bold;margin-top: 10PX;">BONAIED CERTIFICATE</h1>
+        </div>
+        <div class="card-body d-flex flex-column justify-content-between" style="padding-bottom: 20px;height: 290px;">
+            <div style="height: 200px;">
+                <h6 style="font-family: 'Source Sans Pro', sans-serif;font-weight: 700;color: rgb(255,160,0);margin-bottom: 8px;text-align: center;">K.E.S. YASHWANT RAGHOJI PARAB VIDHYALAY VASOLI</h6>
+                <h4><p style="font-family: 'Source Sans Pro', sans-serif;color: #212121;margin-top: 20px;" th:text="'This is to certify that Mr/Ms. '+${data.fname}+' '+${data.mname}+' '+${data.lname}+' '+'S/O or D/O of Mr./Ms.'+' '+${data.mname}+' '+${data.lname}+' '+'bringing roll no '+' '+${data.id}+' '+'is a student of (' +${#dates.year(#dates.createNow())}+')'+' '+${data.stuclass}+' class name/grade for academic year '+${#dates.year(#dates.createNow())}+' '+'He/She is bonafide student of K.E.S. YASHWANT RAGHOJI PARAB VIDHYALAY VASOLI school.' ">This is to certify that Mr/Ms._________________________________________________S/O or D/O of Mr./Ms._______________<br>________________ bringing&nbsp; roll no_____________ is a student of____________ (year)________________ course name/grade<br>for academic year _________.He/She is bonafide student of ________________________________(School/Sollage/University).</p></h4>
+            </div>
+            <p th:text="'Date:-'+${#dates.format(#dates.createNow(), 'yyyy-MM-dd')}"></p>
+            <p>University/Collage/School name and address:-K.E.S. YASHWANT RAGHOJI PARAB VIDHYALAY VASOLI</p>
+            <p>Signature of Principle/Registrar/Dean:-___________________________________________</p>
+        </div>
+    </div><a class="btn btn-primary d-flex d-xl-flex justify-content-center align-items-center justify-content-xl-center align-items-xl-center" role="button" data-bss-hover-animate="pulse" style="margin-top: 20px;background: #128C7E;border-style: none;padding-top: 8px;padding-bottom: 8px;box-shadow: 2px 2px 8px rgba(117,117,117,0.71);" target="_blank"><i class="fas fa-cloud-download-alt" style="color: rgb(255,255,255);font-size: 25px;margin-right: 16px;"></i>Download</a>
+    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/assets/js/bs-init.js"></script>
+    <script src="/assets/js/baguetteBox.min.js"></script>
+    <script src="/assets/js/creative.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/js/jquery.tablesorter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/js/widgets/widget-filter.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/js/widgets/widget-storage.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="/assets/js/Ludens---1-Index-Table-with-Search--Sort-Filters-v20-Ludens---1-Index-Table-with-Search--Sort-Filters.js"></script>
+    <script src="/assets/js/Ludens---1-Index-Table-with-Search--Sort-Filters-v20-Ludens---Material-UI-Actions.js"></script>
+    <script src="/assets/js/Profile-Edit-Form-profile.js"></script>
+</body>
+
+</html>

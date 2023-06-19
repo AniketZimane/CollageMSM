@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>STUDENT_LC_MANAGEMNT_SM</title>
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Roboto:300,400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900">
+    <link rel="stylesheet" href="/assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="/assets/css/baguetteBox.min.css">
+    <link rel="stylesheet" href="/assets/css/Black-Navbar.css">
+    <link rel="stylesheet" href="/assets/css/Card-Store.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/css/theme.bootstrap_4.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="/assets/css/Login-Form-blue-Gradient-Blue-gradient-login-form.css">
+    <link rel="stylesheet" href="/assets/css/Login-Form-blue-Gradient.css">
+    <link rel="stylesheet" href="/assets/css/Ludens---1-Index-Table-with-Search--Sort-Filters-v20.css">
+    <link rel="stylesheet" href="/assets/css/Ludens---Create-Edit-Form.css">
+    <link rel="stylesheet" href="/assets/css/Navbar-With-Button-icons.css">
+    <link rel="stylesheet" href="/assets/css/Profile-Edit-Form-styles.css">
+    <link rel="stylesheet" href="/assets/css/Profile-Edit-Form.css">
+</head>
+
+<body>
+    <section>
+        <div class="lgp-hd">
+            <h2><strong>welcome to Yashwant raghoji barab vidhyalay vasoli</strong></h2>
+            <h5><strong>login to view Dashboard</strong></h5>
+        </div>
+        <div class="container login-cont">
+            <div class="row">
+                <div class="col-10 col-sm-6 col-md-4 col-lg-4 offset-1 offset-sm-3 offset-md-4 offset-lg-4 login-col"><i class="icon ion-lock-combination"></i>
+                    <form class="login-form" method="post">
+                        <div class="form-group mb-3"><input class="form-control lg-frc" type="text" required="" placeholder="Enter user id" name="username"></div>
+                        <div class="form-group mb-3"><input class="form-control lg-frc" type="password" required="" placeholder="Enter Password" name="password"></div>
+                        <div class="form-group mb-3"><button class="btn btn-light btn-lg login-btn" type="submit"><strong>Login</strong></button></div><a href="#" style="color: var(--bs-gray-300);" data-bs-target="#modal-1" data-bs-toggle="modal">Forget password</a>
+                    </form><a href="/student/registration/" style="color: rgb(244,239,238);">Create new account</a>
+                    <div class="modal fade" role="dialog" tabindex="-1" id="modal-1">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Forget password</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <section class="py-4 py-xl-5">
+                                        <div class="container">
+                                            <div class="card mb-5">
+                                                <div class="card-body d-flex flex-column align-items-center">
+                                                    <div class="bs-icon-xl bs-icon-circle bs-icon-primary bs-icon my-4"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-person">
+                                                            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"></path>
+                                                        </svg></div>
+                                                    <form class="text-center" method="post">
+                                                        <div class="mb-3"><input class="form-control" type="password" name="oldpassword" placeholder="Old password"></div>
+                                                        <div class="mb-3"><input class="form-control" type="password" name="newpassword" placeholder="New password"></div>
+                                                        <div class="mb-3"><input class="form-control" type="password" name="confirm_password" placeholder="Confirm password"></div>
+                                                        <div class="mb-3"><button class="btn btn-primary d-block w-100" type="submit">Login</button></div><a href="#">Use another way</a>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/assets/js/bs-init.js"></script>
+    <script src="/assets/js/baguetteBox.min.js"></script>
+    <script src="/assets/js/creative.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/js/jquery.tablesorter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/js/widgets/widget-filter.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/js/widgets/widget-storage.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="/assets/js/Ludens---1-Index-Table-with-Search--Sort-Filters-v20-Ludens---1-Index-Table-with-Search--Sort-Filters.js"></script>
+    <script src="/assets/js/Ludens---1-Index-Table-with-Search--Sort-Filters-v20-Ludens---Material-UI-Actions.js"></script>
+    <script src="/assets/js/Profile-Edit-Form-profile.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Table - Brand</title>
+    <link rel="stylesheet" href="/assestad/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
+    <link rel="stylesheet" href="/assestad/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/assestad/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Advent+Pro&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;display=swap">
+    <link rel="stylesheet" href="/assestad/css/Pretty-Login-Form-.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+          function sendData(){
+            var myValue = document.getElementById("studId").value;
+            var endpoint="/admin/passdata/";
+            var data=myValue;
+            axios.post(endpoint,data)
+              .then(function (response) {
+                var jasonStudentData = response.data;
+                var start = jasonStudentData.indexOf("motherName='") + 12;  // Find the index where the value starts
+                var end = jasonStudentData.indexOf("'", start);  // Find the index where the value ends
+                var motherName = jasonStudentData.substring(start, end);
+                console.log(motherName);
+
+                  $('#motherName').val(motherName);
+                  $('#marathi').prop('disabled', false);
+                  $('#hindi').prop('disabled', false);
+                  $('#english').prop('disabled', false);
+                  $('#math').prop('disabled', false);
+                  $('#science').prop('disabled',false);
+                  $('#socialsci').prop('disabled',false);
+                // Handle the response from the server if needed
+                console.log(response.data);
+              })
+              .catch(function (error) {
+                // Handle any errors that occurred during the request
+                console.error(error);
+              });
+          }
+    </script>
+</head>
+
+<body id="page-top">
+    <div id="wrapper" >
+        <div th:replace="fragmen1.html ::adminfragment1"></div>
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content" >
+                <div th:replace="fragment2.html ::adminfragfragment2"></div>
+                <div class="container-fluid">
+                    <h3 class="text-dark mb-4">K.E.S.Yashwant Raghoji Parab Viddhyalay Vasoli</h3>
+                    <div class="row login-form">
+                        <hr>
+                        <div class="col-md-4 offset-md-4" style="margin-top: 20px;margin-right: 380px;">
+                            <h2 class="text-center form-heading">Candidate Result Form</h2>
+                            <form class="custom-form" method="post" action="/admin/result/upload/" th:object="${Result}">
+                                <div class="form-group mb-3"><input class="form-control" type="text" placeholder="Student Id" id="studId" oninput="sendData()" name="studId"></div>
+                                <div class="form-group mb-3"><input class="form-control" type="text" placeholder="Mother name" name="motherName" id="motherName"></div>
+                                <div class="form-group mb-3">
+                                    <div class="text-center"><label class="form-label" style="color: var(--bs-black);font-family: 'Advent Pro', sans-serif;font-style: italic;font-weight: bold;font-size: 20px;">Subject Score</label></div><input class="form-control" type="text" placeholder="Marathi" id="marathi" name="marathi" disabled="">
+                                </div>
+                                <div class="form-group mb-3"><input class="form-control" type="number" placeholder="Hindi"  id="hindi" name="hindi" disabled=""></div>
+                                <div class="form-group mb-3"><input class="form-control" type="number" placeholder="English" name="english" id="english" disabled=""></div>
+                                <div class="form-group mb-3"><input class="form-control" type="number" placeholder="Mathematics" name="math" id="math" disabled=""></div>
+                                <div class="form-group mb-3"><input class="form-control" type="number" placeholder="Science" name="science" id="science" disabled=""></div>
+                                <div class="form-group mb-3"><input class="form-control" type="number" placeholder="Social Science" name="socialsci" id="socialsci" disabled=""></div>
+                                <button class="btn btn-success form-btn" type="submit">Upload</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="bg-white sticky-footer">
+                <div class="container my-auto">
+                    <div class="text-center my-auto copyright"><span>Copyright © Innovative THings 2023</span></div>
+                </div>
+            </footer>
+        </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+    </div>
+    <script src="/assestad/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/assestad/js/theme.js"></script>
+<!--    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>-->
+
+
+</body>
+
+</html>
